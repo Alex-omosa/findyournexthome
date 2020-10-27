@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "fontsource-roboto";
+import Grid from "@material-ui/core/Grid";
+
+import "./App.css";
+import HomesGrid from "./components/homesGrid/HomesGrid";
+import FilterColumn from "./components/filters/filtercolumn/FilterColumn";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Grid container spacing={1}>
+        <Grid item sm={4} md={2}>
+          <FilterColumn />
+        </Grid>
+        <Grid item sm={8} md={6}>
+          <HomesGrid />
+        </Grid>
+      </Grid>
     </div>
   );
 }
