@@ -1,6 +1,6 @@
 // From https://snazzymaps.com/
 
-export default [
+const MapStyles = [
   {
     featureType: "water",
     stylers: [
@@ -131,3 +131,5 @@ export default [
     ],
   },
 ];
+
+export default MapStyles;

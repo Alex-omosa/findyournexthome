@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  GoogleMap,
-  useJsApiLoader,
-  useLoadScript,
-} from "@react-google-maps/api";
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import Spinner from "./Spinner";
 import MapStyles from "./MapStyles";
 const libraries = ["places"];
