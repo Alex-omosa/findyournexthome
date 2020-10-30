@@ -1,25 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 // import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
-import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
+import { makeStyles } from "@material-ui/core/styles";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import MoreVertOutlinedIcon from "@material-ui/icons/MoreVertOutlined";
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
+import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
+import ExploreOutlinedIcon from "@material-ui/icons/ExploreOutlined";
 const useStyles = makeStyles((theme) => {
   return {
     root: {
       // color: green[600],
-      '&$checked': {
+      "&$checked": {
         color: theme.palette.secondary.main,
       },
     },
     checked: {},
     stickToBottom: {
-      width: '100%',
-      position: 'fixed',
+      width: "100%",
+      position: "fixed",
       bottom: 0,
     },
   };
@@ -44,9 +44,9 @@ function BottomNav() {
       />
       <BottomNavigationAction
         component={Link}
-        to="/search"
-        label="Search"
-        value="search"
+        to="/map"
+        label="Map"
+        value="map"
         icon={<ExploreOutlinedIcon />}
       />
 
