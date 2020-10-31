@@ -1,16 +1,16 @@
 import React from "react";
 import { Marker } from "@react-google-maps/api";
-import InfoWindow from "./InfoWindow";
+import InfoWindow from "../InfoWindow/InfoWindow";
 import MapCard from "./../../../img/home.svg";
 import House2 from "./../../../img/house2.svg";
 
 function MapMarker({ position, defaultOpenInfoWindow, setIsOpenByDefault }) {
   const [isOpenInfoWindow, setIsOpenInfoWindow] = React.useState(null);
 
-  const CloseWindow = React.useCallback(() => {
+  const CloseWindow = () => {
     setIsOpenByDefault(false);
     setIsOpenInfoWindow(false);
-  }, []);
+  };
 
   const showInfoWindow = (position) => (
     <InfoWindow CloseWindow={CloseWindow} position={position} />
