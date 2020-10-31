@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import house from "./../../img/house-1.jpeg";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
 }));
-function HomeCard() {
+function HomeCard({ img, title, price, size, bedRooms, bathroom }) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
@@ -54,35 +53,35 @@ function HomeCard() {
           alt="Home"
           component="img"
           title="house image"
-          image={house}
+          image={img}
         />
         <Typography className={classes.h5} variant="h5" color="textPrimary">
-          $1,500,000
+          $ {price}
         </Typography>
         <Typography
           className={classes.bodytxt}
           variant="body1"
           color="textPrimary"
         >
-          100 West, 15th street, San Fransisco
+          {title}
         </Typography>
         <Grid container>
           <Grid item xs={3} className={classes.item}>
             <BathtubOutlinedIcon className={classes.icons} />
             <Typography variant="body1" className={classes.bodytxt}>
-              2
+              {bedRooms}
             </Typography>
           </Grid>
           <Grid item xs={3} className={classes.item}>
             <KingBedOutlinedIcon className={classes.icons} />
             <Typography variant="body1" className={classes.bodytxt}>
-              2
+              {bathroom}
             </Typography>
           </Grid>
           <Grid item xs={6} className={classes.item}>
             <ZoomOutMapOutlinedIcon className={classes.icons} />
             <Typography variant="body1" className={classes.bodytxt}>
-              2,500 &sup2;ft
+              {size} &sup2;ft
             </Typography>
           </Grid>
         </Grid>
